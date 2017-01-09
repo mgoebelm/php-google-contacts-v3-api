@@ -11,11 +11,11 @@ abstract class GoogleHelper
         $config->clientID = session('GOOGLE_HELPER_CLIENTID',env('GOOGLE_HELPER_CLIENTID',''));
         $config->clientSecret = session('GOOGLE_HELPER_CLIENTSECRET',env('GOOGLE_HELPER_CLIENTSECRET',''));
         $config->redirectUri = session('GOOGLE_HELPER_REDIRECTURI',env('GOOGLE_HELPER_REDIRECTURI',''));
-        //$config->developerKey = session('GOOGLE_HELPER_DEVELOPERKEY',env('GOOGLE_HELPER_DEVELOPERKEY',''));
+        $config->developerKey = session('GOOGLE_HELPER_DEVELOPERKEY',env('GOOGLE_HELPER_DEVELOPERKEY',' '));
         $config->refreshToken = session('GOOGLE_HELPER_REFRESHTOKEN',env('GOOGLE_HELPER_REFRESHTOKEN',''));
 
         foreach ($config as $key => $val) {
-            if(empty($val)){
+            if(!$val){
                throw new \Exception('GOOGLE HELPER invalid: '.$key);
             }
         }
