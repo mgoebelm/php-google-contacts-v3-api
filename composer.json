@@ -1,7 +1,6 @@
 {
     "name": "rapidwebltd/php-google-contacts-v3-api",
     "type": "library",
-    "version" : "10",
     "description": "PHP library for the Google Contacts API (v3)",
     "keywords": ["google", "php", "contacts"],
     "homepage": "https://github.com/rapidwebltd/php-google-contacts-v3-api",
