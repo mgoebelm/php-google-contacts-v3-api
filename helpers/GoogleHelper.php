@@ -6,7 +6,7 @@ abstract class GoogleHelper
 {
     private static function loadConfig()
     {
-        $configPath = __DIR__.'/../../../../.config.json';
+        $configPath = __DIR__.'/../../../../.config-vendaval.json';
         if(!file_exists($configPath)) throw new \Exception('Not found config.json');
         $contents = file_get_contents($configPath);
         $config = json_decode($contents);
