@@ -5,12 +5,15 @@ namespace rapidweb\googlecontacts\helpers;
 abstract class GoogleHelper
 {
     private static function loadConfig()
-    {
-        $configPath = __DIR__.'/../../../../.config-vendaval.json';
-        if(!file_exists($configPath)) throw new \Exception('Not found config.json');
-        $contents = file_get_contents($configPath);
-        $config = json_decode($contents);
-
+    {        
+        $config = new \stdClass;  
+        
+        $config->clientID = session('GOOGLE_HELPER_CLIENTID',env('GOOGLE_HELPER_CLIENTID',''));
+        $config->clientSecret = session('GOOGLE_HELPER_CLIENTSECRET',env('GOOGLE_HELPER_CLIENTSECRET',''));
+        $config->redirectUri = session('GOOGLE_HELPER_REDIRECTURI',env('GOOGLE_HELPER_REDIRECTURI',''));
+        $config->developerKey = session('GOOGLE_HELPER_DEVELOPERKEY',env('GOOGLE_HELPER_DEVELOPERKEY',''));
+        $config->refreshToken = session('GOOGLE_HELPER_REFRESHTOKEN',env('GOOGLE_HELPER_REFRESHTOKEN',''));
+        
         return $config;
     }
 
