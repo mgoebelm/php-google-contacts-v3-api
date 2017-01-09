@@ -1,10 +1,10 @@
 {
-    "name": "mgoebelm/php-google-contacts-v3-api",
+    "name": "rapidwebltd/php-google-contacts-v3-api",
     "type": "library",
     "version" : "10",
     "description": "PHP library for the Google Contacts API (v3)",
     "keywords": ["google", "php", "contacts"],
-    "homepage": "https://github.com/mgoebelm/php-google-contacts-v3-api",
+    "homepage": "https://github.com/rapidwebltd/php-google-contacts-v3-api",
     "license": "MIT",
     "require": {
         "php": ">=5.2.1",
